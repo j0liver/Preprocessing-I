@@ -54,6 +54,123 @@ table {
 }
 
 html, body {
-    height: 100%;
+	height: 100%;
+	max-width: 80%;
+	font-size: 62.5%;
+	margin: 0 auto;
 }
+
+// header styles
+header{
+	display: flex;
+	justify-content: space-between;
+	font-size: 3rem;
+	margin-top: 1%;
+	background: #d3d3d3;
+	
+	.links{
+		display: flex;
+		justify-content: space-evenly;
+		width: 70%;
+
+		a{
+			text-decoration: none;
+			color: #DC143C;
+			
+		}//closes a
+		a:hover{
+			color: #696969;
+		}
+	}//closes links
+}//closes header
+
+.hero{
+	max-width: 100%;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content:space-between;
+	align-items: center;
+	background: #696969;
+	font-size: 1.5rem;
+	height: 40vh;
+
+	img{
+		width:25%;
+
+	}//closes img
+	p{
+		width:60%;
+		color: #d3d3d3;
+		text-align: center;
+	}//closes p
+}
+
+.skills{
+	max-width:100%;
+	margin-top: 2%;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	font-size: 2rem;
+	
+	
+	h2{
+		font-size: 3rem;
+		margin-top: 2%;
+		
+	}
+	.cards{
+		margin-top: 3%;
+		display: flex;
+		justify-content: center;
+		align-content: flex-end;
+		width: 100%;
+		background: #d3d3d3;
+		@media screen and (500px){
+			flex-direction: column;
+		}
+		.card{
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
+			width:30%;
+
+			.fa-html5{
+				color:blue;
+			}
+			.fa-css3-alt{
+				color:red;
+			}
+			.fa-js{
+				color: darkgray;
+			}
+		}
+	}
+
+	ul{
+		margin-top: 2%;
+		display:flex;
+		justify-content:space-between;
+		align-items: center;
+		width:90%;
+		height: 20vh;
+		border: 1px solid gray;
+	}
+}
+.contact{
+	margin-top: 2%;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: center;
+	font-size: 2.5rem;
+	background: #696969;
+	height: 30vh;
+}
+
+
+
+
+
+
 
