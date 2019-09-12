@@ -243,17 +243,28 @@ header .links a:hover {
   flex-direction: column;
   border: 1px solid gray;
   text-align: center;
+  font-size: 2rem;
+  max-width: 100%;
 }
-.work ul {
+.work div {
   margin-top: 2%;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
-  width: 90%;
-  height: 20vh;
+  width: 100%;
+  text-align: center;
 }
-.work ul li {
+.work div a {
   display: flex;
+  justify-content: space-evenly;
+}
+.work div a img {
+  width: 40%;
+}
+@media screen and (max-width: 500px) {
+  .work div {
+    flex-direction: column;
+  }
 }
 .contact {
   margin-top: 2%;
