@@ -133,7 +133,7 @@ table {
 html,
 body {
   height: 100%;
-  max-width: 80%;
+  max-width: 90%;
   font-size: 62.5%;
   margin: 0 auto;
 }
@@ -157,53 +157,63 @@ header .links a:hover {
   color: #696969;
 }
 .hero {
-  max-width: 100%;
   display: flex;
-  flex-wrap: wrap;
   justify-content: space-between;
-  align-items: center;
-  background: #696969;
-  font-size: 1.5rem;
-  height: 40vh;
+  align-content: center;
 }
 .hero img {
-  width: 25%;
+  width: 40%;
 }
-.hero p {
+.hero div {
   width: 60%;
-  color: #d3d3d3;
-  text-align: center;
+  font-size: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+@media screen and (max-width: 500px) {
+  .hero {
+    flex-direction: column;
+  }
+  .hero img {
+    width: 100%;
+  }
+  .hero div {
+    width: 100%;
+  }
 }
 .skills {
   max-width: 100%;
   margin-top: 2%;
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
   justify-content: center;
+  align-items: center;
   font-size: 2rem;
 }
 .skills h2 {
   font-size: 3rem;
   margin-top: 2%;
+  background: #DC143C;
+  color: white;
+  width: 100%;
+  text-align: center;
 }
 .skills .cards {
   margin-top: 3%;
   display: flex;
   justify-content: center;
-  align-content: flex-end;
   width: 100%;
   background: #d3d3d3;
 }
-@media screen and (500px) {
-  .skills .cards {
-    flex-direction: column;
-  }
-}
 .skills .cards .card {
+  display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   width: 30%;
+  text-align: center;
 }
 .skills .cards .card .fa-html5 {
   color: blue;
@@ -214,14 +224,36 @@ header .links a:hover {
 .skills .cards .card .fa-js {
   color: darkgray;
 }
-.skills ul {
+@media screen and (max-width: 500px) {
+  .skills .cards {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .skills .cards .card {
+    width: 60%;
+    border: 1px solid #696969;
+    background: #696969;
+    margin-bottom: 1%;
+  }
+}
+.work {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid gray;
+  text-align: center;
+}
+.work ul {
   margin-top: 2%;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-evenly;
   align-items: center;
   width: 90%;
   height: 20vh;
-  border: 1px solid gray;
+}
+.work ul li {
+  display: flex;
 }
 .contact {
   margin-top: 2%;

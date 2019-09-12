@@ -55,10 +55,25 @@ table {
 
 html, body {
 	height: 100%;
-	max-width: 80%;
+	max-width: 90%;
 	font-size: 62.5%;
 	margin: 0 auto;
 }
+
+
+// varibles
+@weirdGray: #d3d3d3;
+@darkerWierdGray: #696969;
+
+// mixins
+.background1(){
+	background:@darkerWierdGray;
+	color: @weirdGray;
+}
+
+
+
+
 
 // header styles
 header{
@@ -66,7 +81,7 @@ header{
 	justify-content: space-between;
 	font-size: 3rem;
 	margin-top: 1%;
-	background: #d3d3d3;
+	background: @weirdGray;
 	
 	.links{
 		display: flex;
@@ -79,61 +94,73 @@ header{
 			
 		}//closes a
 		a:hover{
-			color: #696969;
+			color: @darkerWierdGray;
 		}
+
 	}//closes links
 }//closes header
 
 .hero{
-	max-width: 100%;
 	display: flex;
-	flex-wrap: wrap;
-	justify-content:space-between;
-	align-items: center;
-	background: #696969;
-	font-size: 1.5rem;
-	height: 40vh;
-
+	justify-content: space-between;
+	align-content: center;
 	img{
-		width:25%;
+		width: 40%;
 
-	}//closes img
-	p{
-		width:60%;
-		color: #d3d3d3;
-		text-align: center;
-	}//closes p
+	}
+	div{
+		width: 60%;
+		font-size: 2rem;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}
+	@media screen and (max-width: 500px) {
+		flex-direction: column;
+		img{
+			width: 100%;
+		}
+		div{
+			width: 100%;
+		}
+	}
 }
 
 .skills{
 	max-width:100%;
 	margin-top: 2%;
 	display: flex;
-	flex-wrap: wrap;
+	flex-direction: column;
 	justify-content: center;
+	align-items: center;
 	font-size: 2rem;
 	
 	
 	h2{
 		font-size: 3rem;
 		margin-top: 2%;
+		background: #DC143C;
+		color: white;
+		width: 100%;
+		text-align: center;
 		
 	}
 	.cards{
 		margin-top: 3%;
 		display: flex;
 		justify-content: center;
-		align-content: flex-end;
 		width: 100%;
 		background: #d3d3d3;
-		@media screen and (500px){
-			flex-direction: column;
-		}
+		
 		.card{
+			display: flex;
 			flex-direction: column;
 			align-items: center;
 			justify-content: center;
 			width:30%;
+			text-align: center;
+			
 
 			.fa-html5{
 				color:blue;
@@ -144,19 +171,42 @@ header{
 			.fa-js{
 				color: darkgray;
 			}
+		}//closes card
+		@media screen and (max-width: 500px){
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: space-between;
+			.card{
+				width: 60%;
+				border: 1px solid @darkerWierdGray;
+				background:@darkerWierdGray;
+				margin-bottom: 1%;
+			}
 		}
+
 	}
 
+}
+.work{
+	display: flex;
+	flex-direction: column;
+	border: 1px solid gray;
+	text-align: center;
 	ul{
 		margin-top: 2%;
 		display:flex;
-		justify-content:space-between;
+		justify-content:space-evenly;
 		align-items: center;
 		width:90%;
 		height: 20vh;
-		border: 1px solid gray;
+		
+		li{
+			display: flex;
+			
+		}
 	}
-}
+}		
 .contact{
 	margin-top: 2%;
 	display: flex;
@@ -167,6 +217,7 @@ header{
 	background: #696969;
 	height: 30vh;
 }
+
 
 
 
